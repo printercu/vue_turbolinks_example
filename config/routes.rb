@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resource :sample, only: [], controller: :samples do
+    get :with_vue, :without_vue
+  end
+
+  root to: 'samples#without_vue'
 end
